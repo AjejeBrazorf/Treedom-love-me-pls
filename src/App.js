@@ -5,10 +5,12 @@ import Navbar from "./navbar/Navbar";
 import Bargain from "./bargain/Bargain";
 
 export default function App() {
-  const laoder = document.getElementById('laoder');
+  const loading = document.getElementById('loading');
 
-  if (laoder && !laoder.classList.contains('hidden')) {
-    setTimeout(() => laoder.classList.add('hidden'), 800 );
+  console.log(loading)
+  console.log(loading && !loading.classList.contains('hidden'))
+  if (loading && !loading.classList.contains('hidden')) {
+    setTimeout(() => loading.classList.add('hidden'), 800 );
   }
 
   return (
