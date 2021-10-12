@@ -1,0 +1,51 @@
+nav {
+  padding: 1.6em 2em 0;
+  display: flex;
+  background: white;
+  box-shadow: 0px 0px 50px 0px #00000020;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+  width: 105px;
+  height: 60px;
+  position: relative;
+  margin-bottom: 0.8rem;
+  margin-right: 2rem;
+  color: #3dd368;
+  transition: color 0.3s ease-in-out;
+}
+svg {
+  height: inherit;
+}
+.tds-svg-icon--fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.tr-navbar-top {
+  align-items: stretch;
+  background-color: #f0f2f5;
+  padding: 0 0.5rem 0 1.8rem;
+  color: #182d3a;
+  height: 2rem;
+  position: absolute;
+  width: calc(100% - 2.3rem);
+}
+
+.tr-navbar-top a {
+  position: absolute;
+  right: 2rem;
+  top: 0.5rem;
+  font-size: 13px;
+}
+
+.tr-logo__navbar-bump {
+  position: absolute;
+  fill: white;
+  bottom: 0;
+  height: 0.9em;
+  width: 11em;
+}

@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #182d3a;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: #182d3a;
+}
+section {
+  padding: 2rem;
+}
+
+section.alternate-bg {
+  background-color: #f5f6f9;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: stretch;
+  text-align: center;
+}
+
+.card--title {
+  background-color: #85b973;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+.card--title h4 {
+  margin: 0;
+}
+
+.card--body {
+  background-color: #eee;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.console {
+  padding: 1rem;
+  color: green;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  padding-right: 2em;
+}
+.console a {
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+.console--line {
+  margin-top: 0.2rem;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% + 1em);
+}
+
+.console--title {
+  font-size: 24px;
+}
+
+.App {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #485d6a;
+}
+.mail {
+  margin-top: -0.9em;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.loader .logo {
+  transform: scale(1.5);
+}
+.loader #catch-phrase {
+  transform: translate(49px, 100px) scale(0.9);
+  animation: 0.5s show-up ease 0.3s both;
+}
+
+.loader .tds-icon-logo__logo {
+  animation: 0.5s grow-up ease both;
+  transform-origin: bottom left;
+}
+
+@keyframes grow-up {
+  from {
+    transform: scale(0.2) rotate(90deg);
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes show-up {
+  from {
+    transform: translate(49px, 100px) scale(0.9);
+  }
+  to {
+    transform: translate(49px, 47.5px) scale(0.9);
+  }
+}
