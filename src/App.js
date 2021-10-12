@@ -5,10 +5,10 @@ import Navbar from "./navbar/Navbar";
 import Bargain from "./bargain/Bargain";
 
 export default function App() {
-  const spinner = document.getElementById('spinner');
+  const laoder = document.getElementById('laoder');
 
-  if (spinner && !spinner.hasAttribute('hidden')) {
-    setTimeout(() => spinner.setAttribute('hidden', 'true'), 800 );
+  if (laoder && !laoder.classList.contains('hidden')) {
+    setTimeout(() => laoder.classList.add('hidden'), 800 );
   }
 
   return (
