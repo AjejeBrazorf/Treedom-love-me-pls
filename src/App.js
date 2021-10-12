@@ -6,9 +6,6 @@ import Bargain from "./bargain/Bargain";
 
 export default function App() {
   const loading = document.getElementById('loading');
-
-  console.log(loading)
-  console.log(loading && !loading.classList.contains('hidden'))
   if (loading && !loading.classList.contains('hidden')) {
     setTimeout(() => loading.classList.add('hidden'), 800 );
   }
