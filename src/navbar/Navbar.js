@@ -4,14 +4,9 @@ const Navbar = (props) => {
     <div>
       <div className="tr-navbar-top">
         <svg
-          vector-effect="non-scaling-stroke"
           viewBox="0 0 150 12"
           xmlns="http://www.w3.org/2000/svg"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          stroke-linejoin="round"
-          stroke-miterlimit="2"
-          class="tr-logo__navbar-bump"
+          className="tr-logo__navbar-bump"
         >
           <defs>
             <clipPath id="a">
@@ -20,7 +15,6 @@ const Navbar = (props) => {
           </defs>
           <path
             d="M51.423 12.544C48.279 6.932 41.744 2.72 33.826 1.908 23.908.83 14.717 5.326 10.936 12.409"
-            clip-path="url(#a)"
           ></path>
         </svg>
         <a href="mailto:">Mail me</a>
@@ -30,10 +24,10 @@ const Navbar = (props) => {
           <svg
             viewBox="0 0 150 58"
             xmlns="http://www.w3.org/2000/svg"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            stroke-linejoin="round"
-            stroke-miterlimit="2"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            strokeLinejoin="round"
+            strokeMiterlimit="2"
             alt="Hey Treedom | Let's hire this guy!"
             title="Hey Treedom | Let's hire this guy!"
             className="tds-svg-icon--fill tds-icon-logo"

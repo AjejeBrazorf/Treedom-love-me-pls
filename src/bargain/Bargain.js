@@ -2,8 +2,8 @@ import "./Bargain.css";
 
 export default function Bargain(props) {
   return (
-    <div class="bargain-box">
-      <div class="bargain-img">
+    <div className="bargain-box">
+      <div className="bargain-img">
         <img src={props.icon} />
       </div>
       <span>{props.title}</span>

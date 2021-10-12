@@ -107,47 +107,15 @@ section.alternate-bg {
   margin-top: -0.9em;
 }
 
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: white;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: center;
+.contacts {
+  display: grid;
   justify-content: center;
+}
+.contacts .row {
+  display: grid;
+  margin: 0.5em;
   align-items: center;
-  z-index: 999;
-}
-.loader .logo {
-  transform: scale(1.5);
-}
-.loader #catch-phrase {
-  transform: translate(49px, 100px) scale(0.9);
-  animation: 0.5s show-up ease 0.3s both;
-}
-
-.loader .tds-icon-logo__logo {
-  animation: 0.5s grow-up ease both;
-  transform-origin: bottom left;
-}
-
-@keyframes grow-up {
-  from {
-    transform: scale(0.2) rotate(90deg);
-  }
-  to {
-    transform: scale(1) rotate(0deg);
-  }
-}
-
-@keyframes show-up {
-  from {
-    transform: translate(49px, 100px) scale(0.9);
-  }
-  to {
-    transform: translate(49px, 47.5px) scale(0.9);
-  }
+  justify-items: center;
+  grid-template-columns: 5rem auto;
+  justify-content: start;
 }
