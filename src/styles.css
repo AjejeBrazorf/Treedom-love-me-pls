@@ -43,6 +43,7 @@ section.alternate-bg {
   flex-direction: column;
   align-content: center;
   align-items: stretch;
+  overflow: auto;
   text-align: center;
 }
 
@@ -91,6 +92,7 @@ section.alternate-bg {
   display: flex;
   justify-content: space-between;
   width: calc(100% + 1em);
+  overflow-wrap: anywhere;
 }
 
 .console--title {
@@ -102,6 +104,9 @@ section.alternate-bg {
   font-size: 18px;
   line-height: 1.42857143;
   color: #485d6a;
+  display: grid;
+  grid-template-rows: 6.4rem auto;
+  height: 100vh;
 }
 .mail {
   margin-top: -0.9em;
@@ -172,7 +177,7 @@ section.alternate-bg {
 
   /* CSS */
   section {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 
 }
@@ -186,7 +191,10 @@ section.alternate-bg {
 
   /* CSS */
   section {
-    padding: .3rem;
+    padding: 2rem 1rem;
+  }
+  .console--line > a:last-child {
+    display: none;
   }
 
 }
