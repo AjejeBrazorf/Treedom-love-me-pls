@@ -1,8 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
 
 body {
   margin: 0;
+}
+
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: #f5f6f9;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #d6d6d6;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  border: 1px solid white;
 }
 
 a {
@@ -23,19 +40,111 @@ h6 {
   font-family: Montserrat, sans-serif;
   font-weight: 700;
   line-height: 1.1;
-}
-
-h3 {
-  text-align: center;
-  font-size: 3rem;
   color: #182d3a;
 }
+
+button, a.button {
+  color: white;
+  background: linear-gradient(90deg,#fb474b,#fb9b2d 43%,#fb9b2d 57%,#fb474b);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  text-shadow: 0 0 4px rgb(251 71 75);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  min-width: 3em;
+  max-width: 100%;
+  padding: 0 2em;
+  overflow: hidden;
+  border-radius: 2em;
+  border: 2px solid transparent;
+  font-size: 15px;
+  font-weight: 800;
+  font-family: Montserrat,sans-serif;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: .02em;
+  white-space: nowrap;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+
+}
+
 section {
-  padding: 2rem 22rem;
+  max-width: 100vw;
+}
+section .content {
+  margin: auto;
+}
+.content.introduction {
+  white-space: pre-line;
+  line-height: 1.4;
+  font-size: 21px;
+}
+.content.profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+.content.profile > div {
+  flex: 0 0 calc(50% - 1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content.profile > div .white-card {
+  margin-bottom: 1rem;
+}
+.content .story {
+  white-space: pre-line;
+}
+
+.slideshow  img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+.resume {
 }
 
 section.alternate-bg {
   background-color: #f5f6f9;
+}
+.checkout {
+  background: #f5f6f9;
+  padding: 1rem;
+  margin: 1.5rem 0 3rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #182d3a;
+  font-size: 28px;
+  font-weight: 900;
+}
+.checkout .prices {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.checkout span.price {
+  text-decoration: line-through;
+  font-weight: 600;
+  font-size: 14px;
+}
+.checkout span.real-price {
+  font-size: 20px;
+  color: #fb474b;
+  padding-left: 1em;
 }
 
 .layout {
@@ -45,6 +154,13 @@ section.alternate-bg {
   align-items: stretch;
   overflow: auto;
   text-align: center;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.card {
+  margin-top: 2rem;
 }
 
 .card--title {
@@ -53,14 +169,17 @@ section.alternate-bg {
   text-transform: uppercase;
   font-size: 14px;
   padding: 10px 15px;
+  border-radius: 8px 8px 0 0;
 }
 
 .card--title h4 {
   margin: 0;
+  color: white;
 }
 
 .card--body {
   background-color: #eee;
+  border-radius: 0 0 8px 8px;
 }
 
 .grid {
@@ -69,17 +188,54 @@ section.alternate-bg {
   align-content: center;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
+}
+
+.white-card {
+  background: white;
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.white-card--header {
+  padding-bottom: 1rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.white-card--header h5 {
+  margin: 0;
+}
+
+.white-card--group-title {
+  display: flex;
+  align-items: center;
+}
+
+.white-card--group-title  img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 8px;
+}
+.white-card--group-title .details {
+  line-height: 1.5;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.white-card--group-title .details span:first-of-type {
+  margin-top: 1em;
 }
 
 .console {
-  padding: 1rem;
+  padding: 1rem 2em 1rem 1rem;
   color: green;
   text-align: left;
   display: flex;
   flex-direction: column;
   line-height: 1.5;
-  padding-right: 2em;
 }
 .console a {
   font-weight: 300;
@@ -130,12 +286,21 @@ section.alternate-bg {
   ##Screen = B/w 1025px to 1280px
 */
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 1025px)  {
 
   /* CSS */
   section {
-    padding: 2rem 11rem;
+  padding: 2rem;
   }
+  section .content{
+    max-width: calc(1025px - 4rem);
+  }
+
+
+  .content.profile > div {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
 
 
 }
@@ -152,6 +317,11 @@ section.alternate-bg {
     padding: 2rem;
   }
 
+  .content.profile > div {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+
 }
 
 /*
@@ -165,6 +335,12 @@ section.alternate-bg {
   section {
     padding: 1.5rem;
   }
+  
+
+  .content.profile > div {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
 
 }
 
@@ -178,6 +354,14 @@ section.alternate-bg {
   /* CSS */
   section {
     padding: 2rem 1rem;
+  }
+
+  .content.profile {
+    flex-direction: column-reverse;
+  }
+
+  .content.profile > div {
+    flex: 0 0 100%;
   }
 
 }
@@ -197,4 +381,78 @@ section.alternate-bg {
     display: none;
   }
 
+  .content.profile > div {
+    flex: 0 0 100%;
+  }
+
+  .content.profile  {
+    flex-direction: column-reverse;
+  }
+
+}
+
+.background {
+  z-index: 5;
+  padding-top: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+
+h1 {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 40px
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 36px
+}
+
+h3 {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px
+}
+
+
+h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px
+}
+
+h6 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px
+}
+@media screen and (min-width: 767px) {
+  h1 {
+    font-size:54px;
+    line-height: 58px
+  }
+
+  h2 {
+    font-size: 42px;
+    line-height: 48px
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: 36px
+  }
+
+  h5 {
+    font-size: 20px;
+    line-height: 24px
+  }
+
+  h6 {
+    font-size: 16px;
+    line-height: 20px
+  }
 }

@@ -1,22 +1,46 @@
 nav {
-  padding: 1.6em 2em 0;
+  padding: 1.6rem 2.3rem 0px;
   display: flex;
   background: white;
-  box-shadow: 0px 0px 50px 0px #00000020;
-  justify-content: space-between;
+  box-shadow: 0 0px 50px 0px #00000020;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.Navbar {
+  z-index: 2;
+  max-width: 100vw;
 }
 
 .logo {
   cursor: pointer;
-  width: 105px;
-  height: 60px;
+  height: 3.9rem;
   position: relative;
   margin-bottom: 0.8rem;
-  margin-right: 2rem;
   color: #3dd368;
   transition: color 0.3s ease-in-out;
 }
+
+nav span a {
+  padding: 1.5rem 1rem;
+  color: #182d3a;
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration-line: none;
+}
+nav span {
+  padding: 0 1rem;
+  flex: 40%;
+}
+
+.Navbar .logo {
+  flex-basis: 20%;
+}
+
+.title {
+  text-align: right;
+}
+
 svg {
   height: inherit;
 }
@@ -25,21 +49,22 @@ svg {
   stroke: none;
 }
 
-.tr-navbar-top {
+.navbar-top {
   align-items: stretch;
   background-color: #f0f2f5;
   padding: 0 0.5rem 0 1.8rem;
   color: #182d3a;
   height: 2rem;
   position: absolute;
-  width: calc(100% - 2.3rem);
+  width: 100%;
 }
 
-.tr-navbar-top a {
+.navbar-top a {
   position: absolute;
   right: 2rem;
   top: 0.5rem;
   font-size: 13px;
+  animation: pulse-black 10s infinite cubic-bezier(0.99, -0.04, 0.61, 0.75)
 }
 
 .tr-logo__navbar-bump {
@@ -48,4 +73,44 @@ svg {
   bottom: 0;
   height: 0.9em;
   width: 11em;
+}
+@media (max-width: 767px) {
+  nav {
+    padding: 1.6rem 1rem 0;
+  }
+
+  nav span a {
+    padding: 1.5rem .5rem;
+  }
+
+  .navbar-top {
+    padding: 0 0 0 .5rem;
+  }
+
+}
+@media (max-width: 481px) {
+  nav span {
+    display: none;
+  }
+
+}
+@keyframes pulse-black {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  90% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  97% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }

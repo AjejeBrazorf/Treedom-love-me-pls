@@ -1,49 +1,79 @@
-.bargain-box {
-  cursor: pointer;
+.skill-box img {
+  /*position: absolute;*/
+  width: 6rem;
+  height: 6rem;
+  transform-origin: center;
+  /*transform: scale(.5);*/
+}
+
+.skill-box {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  max-width: 162px;
-  margin: 0.72em 0.5em 0.73em;
-  padding: 0 1.2rem 1.2rem;
+  align-items: center;
+  color: #485d6a;
+  margin: 1rem;
+  flex: 1 0 25%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  .skill-box {
+    flex: 1 0 40%;
+  }
+
+}
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .skill-box {
+    flex: 1 0 25%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+
+  .skill-box {
+    flex: 1 0 50%;
+    margin: 1rem 0;
+  }
+
+}
+
+
+.skill-box span {
   text-align: center;
-  box-sizing: border-box;
-  color: #182d3a;
-  background-color: #fff;
-  font-size: 18px;
-  border-radius: 5px;
-  box-shadow: 0 6px 20px rgba(47, 80, 23, 0.15);
-  transition: box-shadow 0.2s ease-in;
-  overflow: hidden;
+  line-height: 1;
 }
 
-.bargain-box:hover {
-  box-shadow: 0 3px 15px rgba(47, 80, 23, 0.4);
+.skill-box > * {
+  padding: 7.5px 0;
 }
 
-.bargain-box .bargain-img {
-  width: 100px;
-  height: 100px;
-  margin: 1.2rem auto;
-  display: flex;
+.score {
+  font-weight: bold;
 }
 
-.bargain-box .bargain-img img {
-  margin: auto;
+.svgspinner-circle {
+  width: 6rem;
+  height: 6rem;
   max-width: 100%;
+  fill: transparent;
+  transform-origin: center;
+  overflow: visible;
+  transform: rotate(-90deg);
 }
 
-.bargain-box span {
-  display: block;
-  margin-top: auto;
-  font-weight: 800;
+.circle-background{
+  stroke-width: 10;
+  stroke: #d1d7e0;
 }
-
-.bargain-box .tr-button--link {
-  font-size: 14px;
-}
-
-.bargain-box:hover .tr-button--link {
-  color: #3dd368;
-  text-decoration: underline;
+.circle-up{
+  max-width: 100%;
+  fill: transparent;
+  transform-origin: center;
+  stroke-dasharray: 282.743;
+  stroke-width: 10;
+  stroke-dashoffset: 169.646;
+  stroke: currentcolor;
 }
